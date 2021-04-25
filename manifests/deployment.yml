@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: "mutualfunds-1d9d"
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: "mutualfunds-1d9d"
