@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "mutualfunds-1d9d"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "mutualfunds-1d9d"
+  template:
+    metadata:
+      labels:
+        app: "mutualfunds-1d9d"
+    spec:
+      containers:
+        - name: "mutualfunds-1d9d"
+          image: "mutualfund1.azurecr.io/mutualfunds"
+          ports:
+          - containerPort: 80
