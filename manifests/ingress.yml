@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "mutualfunds-1d9d"
+    labels:
+        app: "mutualfunds-1d9d"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: mutualfundsb1fc-mutualfunds-1d9d.1b13bb647ddb43b498fd.eastus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "mutualfunds-1d9d"
+                servicePort: 80
